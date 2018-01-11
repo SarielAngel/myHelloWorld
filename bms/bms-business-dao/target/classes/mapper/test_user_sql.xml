@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为IUserDao接口方法提供sql语句配置 -->
+<mapper namespace="user">
+    <!-- 查询所有用户 -->
+    <select id="selectUserList" resultType="com.baiu.bms.entity.UserEntity">
+        SELECT
+        USER_NO userNo,
+        USER user,
+        ADDRESS address
+        FROM TEST_USER
+        WHERE
+        ACTIVE_FLAG = 1
+    </select>
+    <!-- 删除用户 -->
+    <update id="deleteUser" parameterType="com.baiu.bms.entity.UserEntity"  >
+        UPDATE
+        TEST_USER
+        SET
+        ACTIVE_FLAG = 0
+        WHERE
+        USER_NO = #{userNo}
+    </update>
+    <!-- 查询指定用户 -->
+    <select id="selectUserOne" resultType="com.baiu.bms.entity.UserEntity">
+        SELECT
+        USER_NO userNo,
+        USER user,
+        ADDRESS address
+        FROM TEST_USER
+        WHERE
+        USER_NO = #{userNo}
+    </select>
+    <!-- 修改用户 -->
+    <update id="updateUser" parameterType="com.baiu.bms.entity.UserEntity"  >
+        UPDATE
+        TEST_USER
+        SET
+        USER_NO = #{userNo},
+        USER = #{user},
+        ADDRESS = #{address}
+        WHERE
+        USER_NO = #{userNo}
+    </update>
+
+    <!-- 新增用户 -->
+    <insert id="insterUser" parameterType="com.baiu.bms.entity.UserEntity">
+        INSERT INTO TEST_USER(
+        USER_NO,
+        USER,
+        ADDRESS,
+        ACTIVE_FLAG
+        ) VALUES (
+        #{userNo},
+        #{user},
+        #{address},
+        1
+        )
+    </insert>
+
+</mapper>

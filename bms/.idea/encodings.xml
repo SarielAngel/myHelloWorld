@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/bms-business-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bms-business-controller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bms-business-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bms-business-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bms-business-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bms-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bms-entity" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bms-pom" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bms-util" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="cacheEnabled" value="false"/>
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <setting name="localCacheScope" value="STATEMENT"/>
+        <setting name="multipleResultSetsEnabled" value="true"/>
+        <setting name="useColumnLabel" value="true"/>
+        <setting name="defaultStatementTimeout" value="25000"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 是否使用插入数据后自增主键的值，需要配合keyProperty使用 -->
+        <setting name="useGeneratedKeys" value="true"/>
+    </settings>
+
+     <!--<plugins>-->
+        <!--&lt;!&ndash; 指定数据库分页方言Dialect, 其它方言:OracleDialect,DB2Dialect 暂不支持其他数据库 &ndash;&gt;-->
+        <!--<plugin interceptor="com.ch.uasp.util.page.PaginationInterceptor">-->
+            <!--<property name="dialectClass" value="com.ch.uasp.util.dialect.MysqlDialect"/>-->
+        <!--</plugin>-->
+    <!--</plugins>-->
+</configuration>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bms-business-dao" />
+        <module name="bms-business-service" />
+        <module name="bms-business-web" />
+        <module name="bms-entity" />
+        <module name="bms-util" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="bms-business-api" target="1.8" />
+      <module name="bms-business-controller" target="1.8" />
+      <module name="bms-business-dao" target="1.8" />
+      <module name="bms-business-service" target="1.8" />
+      <module name="bms-business-web" target="1.8" />
+      <module name="bms-common" target="1.8" />
+      <module name="bms-entity" target="1.8" />
+      <module name="bms-pom" target="1.8" />
+      <module name="bms-util" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

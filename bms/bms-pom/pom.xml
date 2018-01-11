@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- pom文件 -->
+    <groupId>com.baiu.bms</groupId>
+    <artifactId>bms-pom</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+
+    <!-- 项目组件列表 -->
+    <modules>
+        <module>../bms-business-api</module>
+        <module>../bms-business-dao</module>
+        <module>../bms-business-service</module>
+        <module>../bms-business-web</module>
+        <module>../bms-common</module>
+        <module>../bms-entity</module>
+        <module>../bms-util</module>
+    </modules>
+
+    <!-- 版本信息 -->
+    <properties>
+        <!-- 设置工程编码 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- 项目版本号 -->
+        <bms.version>1.0-SNAPSHOT</bms.version>
+
+        <!-- spring版本号 -->
+        <spring.version>4.3.5.RELEASE</spring.version>
+
+        <!-- mybatis版本号 -->
+        <mybatis.version>3.4.1</mybatis.version>
+
+        <!-- mybatis/spring整合版本号 -->
+        <mybatis-spring.version>1.3.1</mybatis-spring.version>
+
+        <!-- java ee 版本号 -->
+        <javaee.version>7.0</javaee.version>
+
+        <!-- junit单元测试版本 -->
+        <junit.version>4.12</junit.version>
+
+        <!-- logback版本号 -->
+        <logback.version>1.2.2</logback.version>
+
+        <!-- JSON 版本号-->
+        <json.version>2.6.7</json.version>
+
+        <!-- mysql 数据库 -->
+        <mysql.version>5.1.41</mysql.version>
+
+        <!-- 数据库连接池版本号 -->
+        <dbcp.version>0.9.5.2</dbcp.version>
+
+        <!-- freemarker 版本号-->
+        <freemarker.version>2.3.20</freemarker.version>
+
+        <!-- springframework 调度包-->
+        <springframework.version>4.0.4.RELEASE</springframework.version>
+
+        <!-- lombok版本号 -->
+        <lombok.version>1.16.12</lombok.version>
+
+        <!-- Sitemesh版本号 -->
+        <sitemesh.version>3.0.0</sitemesh.version>
+    </properties>
+
+    <!-- 各组件版本详情 -->
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- 项目系统版本号 -->
+            <dependency>
+                <groupId>com.chatRobot</groupId>
+                <artifactId>ChatRobot</artifactId>
+                <version>${bms.version}</version>
+            </dependency>
+
+            <!-- Spring -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <!-- MyBatis -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <!-- mybatis/spring整合包 -->
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis-spring.version}</version>
+            </dependency>
+
+
+            <!-- java ee -->
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-api</artifactId>
+                <version>${javaee.version}</version>
+            </dependency>
+
+            <!-- 单元测试 -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+
+            <!-- 实现slf4j接口并整合 -->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+            <!-- JSON -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${json.version}</version>
+            </dependency>
+
+
+            <!-- mysql 数据库 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <!-- 数据库连接池 -->
+            <dependency>
+                <groupId>com.mchange</groupId>
+                <artifactId>c3p0</artifactId>
+                <version>${dbcp.version}</version>
+            </dependency>
+
+            <!-- freemarker -->
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+
+            <!-- springframework -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+
+
+            <!-- lombok插件 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <!-- Sitemesh 3 -->
+            <dependency>
+                <groupId>org.sitemesh</groupId>
+                <artifactId>sitemesh</artifactId>
+                <version>${sitemesh.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
